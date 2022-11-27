@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://use.fontawesome.com/3903c9d7fd.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="">
+<ul class="menu">
+    <li class="menu_list">
+        <span class="front fas fa-home"></span>
+        <a href="/" class="side">home</a>
+    </li>
+    <li class="menu_list">
+        <span class="front fas fa-user-astronaut"></span>
+        <a href="/Avatar" class="side">Create Avatar</a>
+    </li>
+    <li class="menu_list">
+        <span class="front fas fa-video"></span>
+        <a href="#" class="side">Generate Video</a>
+    </li>
+    <li class="menu_list">
+        <span class="front fas fa-microphone"></span>
+        <a href="#" class="side">Clone Voice</a>
+    </li>
+    <li class="menu_list">
+        <span class="front fas fa-image"></span>
+        <a href="#" class="side">Select Template</a>
+    </li>
+    <li class="menu_list">
+        <span class="front fas fa-keyboard"></span>
+        <a href="/Audio" class="side">Generate Speech</a>
+    </li>
+    <li class="menu_list">
+        <span class="front fas fa-paper-plane"></span>
+        <a href="#" class="side">contact</a>
+    </li>
+    <li class="menu_list">
+        <span class="front fas fa-user"></span>
+        <a href="#" class="side">Profile</a>
+    </li>
+
+</ul>
+  </div>
+  <div class="abc">
+    <br>
+    <br>
+    <br><br>
+    <h1>WELCOME TO ANIGEN</h1>
+    <h2>AN AUTOMATED URDU SPOKEPERSON</h2>
+    <br>
+    <h3>Start creating your videos and save your time and money</h3>
+  </div>
+  <div class="image">
+    <img src="{{ url_for('static', filename='images/Character_Image.png')}}" alt="">
+
+  </div>
+</body>
+</html>
