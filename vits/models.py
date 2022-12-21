@@ -514,19 +514,27 @@ class SynthesizerTrn(nn.Module):
   def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None,audiopath=None):
     x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
     if self.n_speakers > 0:
-      # g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
+      g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
       # embedd = self.encoder_manager.compute_embedding_from_clip(audiopath)
       # embeddd = embedd.cpu().detach().numpy()[0]
       # temp = [sum(embeddd[i:i+2]) for i in range(0, len(embeddd), 2)]
-      temp = np.random.uniform(low=-0.07, high=0.07, size=(256,))
+      # temp = np.random.uniform(low=-.5, high=.5, size=(256,))
 
-      temp = np.array(temp)
-      
-      temp = temp.reshape(1, -1)
-      
-      g = torch.tensor(temp).cuda().float().unsqueeze(-1)
+      # temp = np.array(temp)
 
-      print(g)
+      # temp = temp * 10
+
+      # temp = np.round(temp, 4)
+    
+      # temp = temp.reshape(1, -1)
+
+      # print(temp)
+      
+      # g = torch.tensor(temp).cuda().float().unsqueeze(-1)
+
+
+
+      # print(g)
     else:
       g = None
 
